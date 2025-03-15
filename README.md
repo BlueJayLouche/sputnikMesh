@@ -19,6 +19,92 @@ The `settings.xml` file contains several main sections:
 <performance>      <!-- Performance optimization settings -->
 ```
 
+## Parameter Reference Table
+
+Below is a comprehensive table of all parameters with their keyboard shortcuts and default MIDI mappings:
+
+| Parameter          | Description               | Keyboard Shortcut | Default MIDI CC | Range       | XML Parameter ID    |
+|--------------------|---------------------------|-------------------|-----------------|-------------|---------------------|
+| **Basic Parameters** |                         |                   |                 |             |                     |
+| Luma Key Level     | Luma key threshold       | A/Z               | CC 16           | 0.0 - 1.0  | luma_key_level      |
+| X Displacement     | Horizontal displacement  | Q/W               | CC 17           | -1.0 - 1.0 | x_displace          |
+| Y Displacement     | Vertical displacement    | E/R               | CC 18           | -1.0 - 1.0 | y_displace          |
+| Z Frequency        | Z-axis noise frequency   | S/X               | CC 19           | 0.0 - 0.1  | z_frequency         |
+| X Frequency        | X-axis noise frequency   | G/B               | CC 20           | 0.0 - 0.1  | x_frequency         |
+| Y Frequency        | Y-axis noise frequency   | K/,               | CC 21           | 0.0 - 0.1  | y_frequency         |
+| Zoom               | Zoom level               | O/P               | CC 22           | 0.0 - 1.0  | zoom                |
+| Scale/Resolution   | Mesh resolution          | [/]               | N/A             | 50 - 200   | scale               |
+| Center X           | Center X offset          | T/Y               | N/A             | -1.0 - 1.0 | center_x            |
+| Center Y           | Center Y offset          | U/I               | N/A             | -1.0 - 1.0 | center_y            |
+| **LFO Parameters** |                          |                   |                 |             |                     |
+| Z LFO Argument     | Z LFO speed              | D/C               | N/A             | 0.0 - 1.0  | z_lfo_arg           |
+| Z LFO Amplitude    | Z LFO intensity          | F/V               | N/A             | 0.0 - 1.0  | z_lfo_amp           |
+| X LFO Argument     | X LFO speed              | H/N               | N/A             | 0.0 - 1.0  | x_lfo_arg           |
+| X LFO Amplitude    | X LFO intensity          | J/M               | N/A             | 0.0 - 1.0  | x_lfo_amp           |
+| Y LFO Argument     | Y LFO speed              | L/.               | N/A             | 0.0 - 1.0  | y_lfo_arg           |
+| Y LFO Amplitude    | Y LFO intensity          | ;/,               | N/A             | 0.0 - 1.0  | y_lfo_amp           |
+| **Transformation** |                          |                   |                 |             |                     |
+| Rotate X           | X-axis rotation          | N/A               | N/A             | -180 - 180 | rotate_x            |
+| Rotate Y           | Y-axis rotation          | N/A               | N/A             | -180 - 180 | rotate_y            |
+| Rotate Z           | Z-axis rotation          | N/A               | N/A             | -180 - 180 | rotate_z            |
+| Global X Displace  | Global X displacement    | N/A               | N/A             | -1.0 - 1.0 | global_x_displace   |
+| Global Y Displace  | Global Y displacement    | N/A               | N/A             | -1.0 - 1.0 | global_y_displace   |
+| Stroke Weight      | Line thickness           | N/A               | N/A             | 0.5 - 5.0  | stroke_weight       |
+
+## Toggle Controls Table
+
+| Toggle Feature     | Description               | Keyboard Shortcut | Default MIDI CC | XML Toggle ID       |
+|--------------------|---------------------------|-------------------|-----------------|---------------------|
+| Debug Overlay      | Show debug information    | ` (backtick)      | N/A             | debug               |
+| Luma Key           | Enable luma key effect    | 1                 | CC 57           | lumaKey             |
+| Bright Mode        | Brightness boost          | 2                 | CC 53           | bright              |
+| Invert             | Invert colors             | 3                 | CC 54           | invert              |
+| Black & White      | Monochrome mode           | 5                 | CC 56           | blackAndWhite       |
+| Stroke Weight      | Use custom stroke weight  | N/A               | CC 55           | strokeWeight        |
+| Wireframe          | Wireframe rendering       | N/A               | N/A             | wireframe           |
+
+## Mesh Types Table
+
+| Mesh Type          | Description               | Keyboard Shortcut | Default MIDI CC | Mesh Type Value     |
+|--------------------|---------------------------|-------------------|-----------------|---------------------|
+| Triangle Grid      | Filled triangular mesh    | - (minus)         | CC 49           | 0                   |
+| Horizontal Lines   | Horizontal line grid      | 0                 | CC 50           | 1                   |
+| Vertical Lines     | Vertical line grid        | 9                 | CC 51           | 2                   |
+| Triangle Wireframe | Wireframe triangular mesh | = (equals)        | CC 52           | 3                   |
+
+## LFO Controls Table
+
+| LFO Setting         | Description              | Keyboard Shortcut | Default MIDI CC | XML LFO ID          |
+|---------------------|--------------------------|-------------------|-----------------|---------------------|
+| Z LFO Shape         | Z wave shape             | 6                 | N/A             | zShape              |
+| X LFO Shape         | X wave shape             | 7                 | N/A             | xShape              |
+| Y LFO Shape         | Y wave shape             | 8                 | N/A             | yShape              |
+| Z Ring Modulation   | Z ring mod toggle        | !                 | N/A             | zRingMod            |
+| X Ring Modulation   | X ring mod toggle        | @                 | N/A             | xRingMod            |
+| Y Ring Modulation   | Y ring mod toggle        | #                 | N/A             | yRingMod            |
+| Z Phase Modulation  | Z phase mod toggle       | $                 | N/A             | zPhaseMod           |
+| X Phase Modulation  | X phase mod toggle       | %                 | N/A             | xPhaseMod           |
+| Y Phase Modulation  | Y phase mod toggle       | ^                 | N/A             | yPhaseMod           |
+
+## System Controls Table
+
+| Function            | Description                 | Keyboard Shortcut     | Default MIDI CC | Notes                       |
+|---------------------|-----------------------------|-------------------|-----------------|----------------------------|
+| Reset Parameters    | Reset to defaults           | Shift+R           | CC 58           | Resets all parameters      |
+| Toggle Audio        | Audio reactivity on/off     | Shift+A           | N/A             |                            |
+| Cycle Audio Device  | Switch audio input device   | Shift+D           | N/A             |                            |
+| Audio Smoothing     | Adjust audio smoothing      | Shift+[/]         | N/A             | Lower/higher smoothing     |
+| Audio Sensitivity   | Adjust audio sensitivity    | Shift+−/=         | N/A             | Lower/higher sensitivity   |
+| FFT Normalization   | Toggle normalization        | Shift+N           | N/A             |                            |
+| Performance Mode    | Toggle performance mode     | Shift+P           | N/A             | Optimizes for weaker CPUs  |
+| Cycle Video Device  | Switch video input device   | Shift+V           | N/A             |                            |
+| Cycle Video Format  | Switch video format         | Shift+F           | N/A             | YUYV, MJPEG, etc.          |
+| Cycle Resolution    | Switch video resolution     | Shift+Z           | N/A             |                            |
+| Camera Framerate    | Adjust camera FPS           | Shift+Ctrl+−/=    | N/A             | Decrease/increase FPS      |
+| Recording           | Start/stop parameter recording | N/A            | CC 60           | For parameter lock system  |
+| MIDI Map Template   | Generate MIDI template      | Shift+M           | N/A             | Creates mapping_template.xml |
+| Video Info          | Print video device info     | Shift+I           | N/A             | Outputs to console         |
+
 ## 1. Configuring MIDI Channel Mappings
 
 The `<midiMappings>` section allows you to map MIDI controllers to specific parameters. Here's how to configure it:
@@ -36,33 +122,6 @@ The `<midiMappings>` section allows you to map MIDI controllers to specific para
   <!-- Add more mappings as needed -->
 </midiMappings>
 ```
-
-### Available Parameter IDs:
-
-Here are the parameter IDs you can use in your mappings:
-
-- `luma_key_level` - Controls luma key threshold (0.0-1.0)
-- `x_displace` - Horizontal displacement (-1.0-1.0, typically bipolar)
-- `y_displace` - Vertical displacement (-1.0-1.0, typically bipolar)
-- `z_frequency` - Z-axis noise frequency (0.0-0.1)
-- `x_frequency` - X-axis noise frequency (0.0-0.1)
-- `y_frequency` - Y-axis noise frequency (0.0-0.1)
-- `zoom` - Zoom level (0.0-1.0)
-- `scale` - Mesh resolution (50-200)
-- `center_x` - Center X offset (-1.0-1.0, typically bipolar)
-- `center_y` - Center Y offset (-1.0-1.0, typically bipolar)
-- `z_lfo_arg` - Z LFO argument (0.0-1.0)
-- `z_lfo_amp` - Z LFO amplitude (0.0-1.0)
-- `x_lfo_arg` - X LFO argument (0.0-1.0)
-- `x_lfo_amp` - X LFO amplitude (0.0-1.0)
-- `y_lfo_arg` - Y LFO argument (0.0-1.0)
-- `y_lfo_amp` - Y LFO amplitude (0.0-1.0)
-- `rotate_x` - X-axis rotation (-180.0-180.0, typically bipolar)
-- `rotate_y` - Y-axis rotation (-180.0-180.0, typically bipolar)
-- `rotate_z` - Z-axis rotation (-180.0-180.0, typically bipolar)
-- `global_x_displace` - Global X displacement (-1.0-1.0, typically bipolar)
-- `global_y_displace` - Global Y displacement (-1.0-1.0, typically bipolar)
-- `stroke_weight` - Line thickness (0.5-5.0)
 
 ## 2. Configuring Audio Reactivity and FFT Bins
 
@@ -107,14 +166,14 @@ The `<audioReactivity>` section controls audio input and analysis:
 The FFT (Fast Fourier Transform) bins represent different frequency ranges. With the default 1024 FFT size and 44100Hz sample rate, each bin represents about 43Hz. The `<bandRanges>` section maps groups of bins to logical frequency bands.
 
 Default frequency bands:
-1. Band 0 (bins 0-3): Sub bass (20-60Hz)
-2. Band 1 (bins 4-9): Bass (60-250Hz)
-3. Band 2 (bins 10-19): Low mids (250-500Hz)
-4. Band 3 (bins 20-39): Mids (500-2000Hz)
-5. Band 4 (bins 40-59): High mids (2-4kHz)
-6. Band 5 (bins 60-79): Presence (4-6kHz)
-7. Band 6 (bins 80-99): Brilliance (6-12kHz)
-8. Band 7 (bins 100-127): Air (12-20kHz)
+1. Band 0 (bins 1-2): Sub bass (20-60Hz)
+2. Band 1 (bins 3-5): Bass (60-250Hz)
+3. Band 2 (bins 6-11): Low mids (250-500Hz)
+4. Band 3 (bins 12-46): Mids (500-2000Hz)
+5. Band 4 (bins 47-92): High mids (2-4kHz)
+6. Band 5 (bins 93-139): Presence (4-6kHz)
+7. Band 6 (bins 140-278): Brilliance (6-12kHz)
+8. Band 7 (bins 279-511): Air (12-20kHz)
 
 Adjust these ranges to focus on specific frequency areas that you want to react to.
 
@@ -174,102 +233,11 @@ Performance mode applies multiple optimizations for lower-powered devices like R
 
 Toggle performance mode with `Shift+P` during runtime.
 
-## 5. Selecting Audio Devices
-
-To change the audio input device:
-
-1. Find the `<deviceName>` and `<deviceIndex>` tags in the `<audioReactivity>` section
-2. Set `<deviceName>` to the exact name of your audio device (e.g., "Built-in Microphone")
-3. Set `<deviceIndex>` to the device's index in your system (typically 0 for default device)
-
-Example:
-```xml
-<deviceName>Apple Inc.: Built-in Microphone</deviceName>
-<deviceIndex>0</deviceIndex>
-```
-
-To see available audio devices, run the application and check the console output, which lists all detected audio input devices.
-
-## 6. Toggle Settings
-
-The `<toggles>` section controls various rendering options:
-
-```xml
-<toggles>
-    <debug>0</debug>             <!-- Enable debug overlay: 0 = off, 1 = on -->
-    <wireframe>1</wireframe>     <!-- Wireframe rendering: 0 = off, 1 = on -->
-    <bright>1</bright>           <!-- Brightness boost: 0 = off, 1 = on -->
-    <invert>1</invert>           <!-- Invert colors: 0 = off, 1 = on -->
-    <strokeWeight>0</strokeWeight> <!-- Use custom stroke weight: 0 = off, 1 = on -->
-    <blackAndWhite>0</blackAndWhite> <!-- Monochrome: 0 = off, 1 = on -->
-    <lumaKey>0</lumaKey>         <!-- Luma key effect: 0 = off, 1 = on -->
-</toggles>
-```
-
-## 7. Core Parameters
-
-The `<parameters>` section controls primary visual effects:
-
-```xml
-<parameters>
-    <lumaKeyLevel>0.0</lumaKeyLevel> <!-- Luma key threshold (0.0-1.0) -->
-    <xDisplace>0.0</xDisplace>      <!-- X displacement (-1.0-1.0) -->
-    <yDisplace>0.0</yDisplace>      <!-- Y displacement (-1.0-1.0) -->
-    <zFrequency>0.02</zFrequency>   <!-- Z noise frequency (0.0-0.1) -->
-    <xFrequency>0.015</xFrequency>  <!-- X noise frequency (0.0-0.1) -->
-    <yFrequency>0.02</yFrequency>   <!-- Y noise frequency (0.0-0.1) -->
-    <zoom>0.064</zoom>              <!-- Mesh zoom factor (0.0-1.0) -->
-    <scale>100</scale>              <!-- Mesh resolution/density (50-200) -->
-    <centerX>0.0</centerX>          <!-- X center offset (-1.0-1.0) -->
-    <centerY>0.0</centerY>          <!-- Y center offset (-1.0-1.0) -->
-    <!-- Additional LFO parameters -->
-</parameters>
-```
-
-## 8. LFO and Modulation Settings
-
-The `<lfo>` section controls modulation effects:
-
-```xml
-<lfo>
-    <yShape>0</yShape>          <!-- Y LFO wave shape: 0=sine, 1=square, 2=triangle, 3=sawtooth -->
-    <xShape>0</xShape>          <!-- X LFO wave shape -->
-    <zShape>0</zShape>          <!-- Z LFO wave shape -->
-    <yRingMod>0</yRingMod>      <!-- Y ring modulation: 0=off, 1=on -->
-    <xRingMod>0</xRingMod>      <!-- X ring modulation -->
-    <zRingMod>0</zRingMod>      <!-- Z ring modulation -->
-    <yPhaseMod>0</yPhaseMod>    <!-- Y phase modulation: 0=off, 1=on -->
-    <xPhaseMod>0</xPhaseMod>    <!-- X phase modulation -->
-    <zPhaseMod>0</zPhaseMod>    <!-- Z phase modulation -->
-</lfo>
-```
-
 ## Advanced Tips
 
 ### Generating a MIDI Mapping Template
 
 The application includes a feature to generate a template MIDI mapping file. Press Shift+M while running the application to generate a `mapping_template.xml` file in the data folder. This template contains all available parameters with default settings, which you can customize and then copy into your settings.xml file.
-
-### Runtime Controls
-
-While running the application, you can use these keyboard shortcuts:
-
-- **\`** (backtick): Toggle debug overlay
-- **Shift+R**: Reset all parameters to defaults
-- **Shift+A**: Toggle audio reactivity
-- **Shift+D**: Cycle through audio input devices
-- **Shift+[** / **Shift+]**: Decrease/increase audio smoothing
-- **Shift+-** / **Shift+=**: Decrease/increase audio sensitivity
-- **Shift+N**: Toggle FFT normalization
-- **Shift+P**: Toggle performance mode
-- **Shift+V**: Cycle through video devices
-- **Shift+F**: Cycle through video formats
-- **Shift+Ctrl+R**: Cycle through video resolutions
-- **Shift+Ctrl+-** / **Shift+Ctrl+=**: Decrease/increase camera framerate
-- **Shift+I**: Print video device information to console
-- **1-8**: Toggle various effects (Luma Key, Bright, Invert, etc.)
-- **9-0**: Change mesh types
-- **[** / **]**: Decrease/increase mesh resolution
 
 ## Raspberry Pi Optimization
 
