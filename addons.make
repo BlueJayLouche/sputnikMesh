@@ -1,0 +1,3 @@
+ofxFft
+ofxMidi
+ofxXmlSettings

@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		"0BC0E143-29BB-4C7E-9D6A-1B3600643910" /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "5282F015-CEBE-469F-AA95-112B84D3947E" /* tinyxml.cpp */; };
+		"25193A5E-CE14-4BCD-837F-820308C13509" /* ofxPGMidiDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = "DBB8BCEA-6843-492C-B045-B6F1BC27F168" /* ofxPGMidiDelegate.mm */; };
+		"2B146A13-A7D4-4ECB-8A59-F6EBB63118B0" /* kiss_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = "EE678172-8E69-4076-80C0-0206BAA32881" /* kiss_fft.c */; };
+		"2C73C232-FF69-4D36-AB3F-7FEA2F0BE24E" /* ofxFftw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "37F0690A-CFB3-4487-909F-0FF2D000D077" /* ofxFftw.cpp */; };
+		"35D690A2-34CD-4532-A6C0-88B1CC8B194C" /* PGMidi.mm in Sources */ = {isa = PBXBuildFile; fileRef = "340956B7-C005-48EB-AE25-6723FA1B0CC6" /* PGMidi.mm */; };
+		"36B860AB-1530-4E2B-A0A0-F9C6C462A0AF" /* TextureHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "8DD69DA1-821C-4D60-9B17-601DF276F9E0" /* TextureHelper.cpp */; };
+		"3F8D91DC-D110-4258-97CB-A06DC06DE8F8" /* PGMidiAllSources.mm in Sources */ = {isa = PBXBuildFile; fileRef = "C1F56F07-6ACE-4CA1-B7A1-A8DDD56AAE71" /* PGMidiAllSources.mm */; };
+		"495F8BC6-3A0A-45B7-B84D-33A0B6CA797B" /* ofxEasyFft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "B15B9E96-306B-4562-90D9-AD0D7AE5DD2E" /* ofxEasyFft.cpp */; };
+		"4EE5E699-2262-41C4-80F4-11498F920F1D" /* ofxProcessFFT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "E1812141-559A-43A3-BBB1-84FF71F29F15" /* ofxProcessFFT.cpp */; };
+		"4F38792A-A389-40A9-A482-73E3C795A190" /* ofxBaseMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "72410BD4-A835-435D-9F89-5D67BA9E8B8A" /* ofxBaseMidi.cpp */; };
+		"5687A4B3-CB61-4942-BE14-94FE559A3481" /* ofxMidiTimecode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "4559D345-D37B-4DEB-9325-191137A5F51E" /* ofxMidiTimecode.cpp */; };
+		"574890B6-9A79-4CA8-A3EA-61E505601419" /* ofxMidiClock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "F049A420-1DBC-4961-8590-EA96528BD8A8" /* ofxMidiClock.cpp */; };
+		"5D27175A-3667-4CAB-8048-645C2167C1EB" /* PGMidiFind.mm in Sources */ = {isa = PBXBuildFile; fileRef = "165739B7-3BB8-4153-90AA-EFBFF77E4288" /* PGMidiFind.mm */; };
+		"5D827B76-AD09-49B7-8718-14DDDC9CBCCC" /* kiss_fftr.c in Sources */ = {isa = PBXBuildFile; fileRef = "A71FFB20-63E9-4094-B55D-1869B9054852" /* kiss_fftr.c */; };
+		"5EFE7B92-697F-4E3A-9E71-0B92DDF846B0" /* ofxMidiOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "F9A098E5-864F-4DD6-B91C-E8CDA114C72A" /* ofxMidiOut.cpp */; };
+		"64D19569-6000-4BA8-A83A-EDBABBBD8DF1" /* ofxMidiMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "9ED4BBDD-2AC6-45E9-9209-23576FD0933A" /* ofxMidiMessage.cpp */; };
+		"6CBBB5A9-968D-45D9-8FFD-208E57DF9D0C" /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "50969C29-4819-4B88-8BC0-C4C5614749FB" /* tinyxmlerror.cpp */; };
+		"6F0254BB-6A7E-4096-B531-C93AF317B2EB" /* ofxFft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "9FCA8BC2-7451-49D1-AECE-C71925E62E69" /* ofxFft.cpp */; };
+		"74991C28-C686-4BFC-879C-92E173E1F8F9" /* ofxFftBasic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "E55CB356-49AD-46C2-84F8-BF115C5CDCC9" /* ofxFftBasic.cpp */; };
+		"75D0C19F-CC16-4028-9CAA-9E8C495B0AD8" /* AudioReactivityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "12FB3541-B86C-44F3-86CA-91E1CAD0DE40" /* AudioReactivityManager.cpp */; };
+		"8B5FF3CE-5181-42F3-8B53-20B77198E012" /* ofxPGMidiIn.mm in Sources */ = {isa = PBXBuildFile; fileRef = "AF730DF4-8080-4DD5-82E0-5BD03050ED7F" /* ofxPGMidiIn.mm */; };
+		"A077E46E-2B0E-4F85-A448-33D3EE0D3412" /* MeshGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "041E2AF9-F80C-4D64-B315-3DC5F49A2A81" /* MeshGenerator.cpp */; };
+		"B1D6C37D-F163-46C5-9F53-C2A9A77D5AF0" /* ofxPGMidiContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = "2F675672-B726-4C7C-836C-95080E2CD7C8" /* ofxPGMidiContext.mm */; };
+		"B2741722-2E13-485D-874A-B6CC35A617AF" /* MidiManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "DACA5092-B0BB-4FDC-AD8D-2E736ED4618E" /* MidiManager.cpp */; };
+		"BDCCFAC4-7F70-40C6-B91C-3D9135CA8424" /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "B678AF1A-E918-4902-A649-1F60FFD36497" /* ofxXmlSettings.cpp */; };
+		"BEF1A7D2-804A-4995-8A9C-4CABB23C10C5" /* ofxRtMidiIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "3C767DD4-75C4-4154-9FB5-5AA1FFC128EE" /* ofxRtMidiIn.cpp */; };
+		"C411EFBD-2C3F-435D-84C2-336ADA70C0E1" /* ofxPGMidiSourceDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = "DDF94342-C28C-4FA4-8D03-499D8268A097" /* ofxPGMidiSourceDelegate.mm */; };
+		"C88522EB-D747-43F0-B864-452C2FD6692C" /* ofxRtMidiOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "A96A2949-AD33-4350-9FEE-A1A8A6DD39D5" /* ofxRtMidiOut.cpp */; };
+		"C9C02B50-7CAC-45BD-939D-00105F5CF8B2" /* ofxPGMidiOut.mm in Sources */ = {isa = PBXBuildFile; fileRef = "A0799FC1-98A4-4246-B675-4739D63C92AD" /* ofxPGMidiOut.mm */; };
+		"CA0E3D38-5C6F-437F-9B69-C385B70A8425" /* ParameterManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "56461F00-77F3-43E3-9EBA-52EDB3D93A40" /* ParameterManager.cpp */; };
+		"CA710A3E-883B-4128-92FD-BDA2A387AADB" /* ofxMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "540B168A-471B-4A24-AA9B-9CD08DC0EE07" /* ofxMidi.cpp */; };
+		"D232F57D-8D98-4A98-9D3A-C252928CC318" /* ofxMidiIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "374D4219-81CD-4F77-A9B9-F32F38BC8CB5" /* ofxMidiIn.cpp */; };
+		DE861CBF2D82ECCE00956097 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE861CBE2D82ECCE00956097 /* CoreMIDI.framework */; };
+		DECFE51B2D8537CF00AFCE06 /* V4L2Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DECFE5192D8537CF00AFCE06 /* V4L2Helper.cpp */; };
+		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+		"E895C423-9C85-4F5B-9B60-85680E7D4F7F" /* ShaderLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "18E81D0D-ED02-4921-8386-AC275AD30F14" /* ShaderLoader.cpp */; };
+		"EE25C7F2-2F55-4072-8E57-63D8A9546BB2" /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "BA60DCD7-B128-4064-969E-EFEF37A3EFE5" /* tinyxmlparser.cpp */; };
+		"F9EC0D94-0346-43F9-A2F3-97603FCCD77C" /* RtMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "CE745C6B-AF35-448A-9E1F-24975AB2296E" /* RtMidi.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4A5B60F29BAAAE400C2D356 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		"041E2AF9-F80C-4D64-B315-3DC5F49A2A81" /* MeshGenerator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MeshGenerator.cpp; path = src/MeshGenerator.cpp; sourceTree = SOURCE_ROOT; };
+		"04C6B178-8DC7-4915-99D2-10F6A259671A" /* ofxBaseMidi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxBaseMidi.h; path = ../../../addons/ofxMidi/src/ofxBaseMidi.h; sourceTree = SOURCE_ROOT; };
+		"0A1355EE-A39A-439C-8379-8402D75E0FF0" /* ofxPGMidiContext.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPGMidiContext.h; path = ../../../addons/ofxMidi/src/ios/ofxPGMidiContext.h; sourceTree = SOURCE_ROOT; };
+		"12FB3541-B86C-44F3-86CA-91E1CAD0DE40" /* AudioReactivityManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = AudioReactivityManager.cpp; path = src/AudioReactivityManager.cpp; sourceTree = SOURCE_ROOT; };
+		"165739B7-3BB8-4153-90AA-EFBFF77E4288" /* PGMidiFind.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = PGMidiFind.mm; path = ../../../addons/ofxMidi/libs/pgmidi/PGMidiFind.mm; sourceTree = SOURCE_ROOT; };
+		"173C1761-BCE3-4763-A50F-0FE6C666446C" /* ofxMidiIn.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidiIn.h; path = ../../../addons/ofxMidi/src/ofxMidiIn.h; sourceTree = SOURCE_ROOT; };
+		"18E81D0D-ED02-4921-8386-AC275AD30F14" /* ShaderLoader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ShaderLoader.cpp; path = src/ShaderLoader.cpp; sourceTree = SOURCE_ROOT; };
+		191CD6FA2847E21E0085CBB6 /* of.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = of.entitlements; sourceTree = "<group>"; };
+		191EF70929D778A400F35F26 /* openFrameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = openFrameworks; path = ../../../libs/openFrameworks; sourceTree = SOURCE_ROOT; };
+		"222456DF-5673-439A-9261-F92F2293B764" /* ofxPGMidiIn.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPGMidiIn.h; path = ../../../addons/ofxMidi/src/ios/ofxPGMidiIn.h; sourceTree = SOURCE_ROOT; };
+		"22781C72-62BD-40B8-AFA6-4C6FE45EE980" /* PGMidiAllSources.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PGMidiAllSources.h; path = ../../../addons/ofxMidi/libs/pgmidi/PGMidiAllSources.h; sourceTree = SOURCE_ROOT; };
+		"24DD3363-CA88-486C-B42E-4311BB677D6B" /* ofxRtMidiOut.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxRtMidiOut.h; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiOut.h; sourceTree = SOURCE_ROOT; };
+		"2DF6EC35-C8B6-4462-ACEF-7EF5DD1BC91A" /* ofxPGMidiOut.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPGMidiOut.h; path = ../../../addons/ofxMidi/src/ios/ofxPGMidiOut.h; sourceTree = SOURCE_ROOT; };
+		"2F675672-B726-4C7C-836C-95080E2CD7C8" /* ofxPGMidiContext.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ofxPGMidiContext.mm; path = ../../../addons/ofxMidi/src/ios/ofxPGMidiContext.mm; sourceTree = SOURCE_ROOT; };
+		"3106DBBA-0CC4-4F61-957E-3732BD07A754" /* ofxFftw.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxFftw.h; path = ../../../addons/ofxFft/src/ofxFftw.h; sourceTree = SOURCE_ROOT; };
+		"331DB41B-E2A7-4028-B6BA-807507B1DA76" /* ofxFft.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxFft.h; path = ../../../addons/ofxFft/src/ofxFft.h; sourceTree = SOURCE_ROOT; };
+		"340956B7-C005-48EB-AE25-6723FA1B0CC6" /* PGMidi.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = PGMidi.mm; path = ../../../addons/ofxMidi/libs/pgmidi/PGMidi.mm; sourceTree = SOURCE_ROOT; };
+		"369B725A-F4E0-46FE-8AC8-6E16530B9E44" /* ofxPGMidiSourceDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPGMidiSourceDelegate.h; path = ../../../addons/ofxMidi/src/ios/ofxPGMidiSourceDelegate.h; sourceTree = SOURCE_ROOT; };
+		"374D4219-81CD-4F77-A9B9-F32F38BC8CB5" /* ofxMidiIn.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxMidiIn.cpp; path = ../../../addons/ofxMidi/src/ofxMidiIn.cpp; sourceTree = SOURCE_ROOT; };
+		"37F0690A-CFB3-4487-909F-0FF2D000D077" /* ofxFftw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxFftw.cpp; path = ../../../addons/ofxFft/src/ofxFftw.cpp; sourceTree = SOURCE_ROOT; };
+		"3B477D91-65D6-4562-8706-CDEC0A6DC474" /* ofxFftBasic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxFftBasic.h; path = ../../../addons/ofxFft/src/ofxFftBasic.h; sourceTree = SOURCE_ROOT; };
+		"3C767DD4-75C4-4154-9FB5-5AA1FFC128EE" /* ofxRtMidiIn.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxRtMidiIn.cpp; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiIn.cpp; sourceTree = SOURCE_ROOT; };
+		"438CBEEE-328C-4877-B7FF-F4947C392D30" /* PGArc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PGArc.h; path = ../../../addons/ofxMidi/libs/pgmidi/PGArc.h; sourceTree = SOURCE_ROOT; };
+		"4559D345-D37B-4DEB-9325-191137A5F51E" /* ofxMidiTimecode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxMidiTimecode.cpp; path = ../../../addons/ofxMidi/src/ofxMidiTimecode.cpp; sourceTree = SOURCE_ROOT; };
+		"47572930-CB4D-4D8B-834F-97E345DF1747" /* ParameterManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ParameterManager.h; path = src/ParameterManager.h; sourceTree = SOURCE_ROOT; };
+		"4DCF4B42-EE6F-4FE3-B686-E0991095A7D0" /* AudioReactivityManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = AudioReactivityManager.h; path = src/AudioReactivityManager.h; sourceTree = SOURCE_ROOT; };
+		"50969C29-4819-4B88-8BC0-C4C5614749FB" /* tinyxmlerror.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxmlerror.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlerror.cpp; sourceTree = SOURCE_ROOT; };
+		"5282F015-CEBE-469F-AA95-112B84D3947E" /* tinyxml.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxml.cpp; sourceTree = SOURCE_ROOT; };
+		"540B168A-471B-4A24-AA9B-9CD08DC0EE07" /* ofxMidi.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxMidi.cpp; path = ../../../addons/ofxMidi/src/ofxMidi.cpp; sourceTree = SOURCE_ROOT; };
+		"55538DA2-EA39-4BAB-BE7B-3A05C0E44B0F" /* iOSVersionDetection.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iOSVersionDetection.h; path = ../../../addons/ofxMidi/libs/pgmidi/iOSVersionDetection.h; sourceTree = SOURCE_ROOT; };
+		"56461F00-77F3-43E3-9EBA-52EDB3D93A40" /* ParameterManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ParameterManager.cpp; path = src/ParameterManager.cpp; sourceTree = SOURCE_ROOT; };
+		"56DB6A13-9301-4C91-91B9-B83B91455C48" /* PGMidiFind.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PGMidiFind.h; path = ../../../addons/ofxMidi/libs/pgmidi/PGMidiFind.h; sourceTree = SOURCE_ROOT; };
+		"5B37FFC8-5400-4469-9142-22B9593319C1" /* ofxFftwKiss.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxFftwKiss.h; path = ../../../addons/ofxFft/src/ofxFftwKiss.h; sourceTree = SOURCE_ROOT; };
+		"5B641352-77E7-44BB-90DC-5DC183974804" /* ofxMidiConstants.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidiConstants.h; path = ../../../addons/ofxMidi/src/ofxMidiConstants.h; sourceTree = SOURCE_ROOT; };
+		"67635D58-78D4-4A43-98BC-239E75BDAC9B" /* TextureHelper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = TextureHelper.h; path = src/TextureHelper.h; sourceTree = SOURCE_ROOT; };
+		"6D676428-F69F-4765-9B0A-E2FDE2906058" /* ofxPGMidiDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPGMidiDelegate.h; path = ../../../addons/ofxMidi/src/ios/ofxPGMidiDelegate.h; sourceTree = SOURCE_ROOT; };
+		"72410BD4-A835-435D-9F89-5D67BA9E8B8A" /* ofxBaseMidi.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxBaseMidi.cpp; path = ../../../addons/ofxMidi/src/ofxBaseMidi.cpp; sourceTree = SOURCE_ROOT; };
+		"75AC637E-18E9-4520-9262-BDBF23409D4F" /* ofxXmlSettings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxXmlSettings.h; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.h; sourceTree = SOURCE_ROOT; };
+		"8709A3D7-7ABC-4318-9740-4A046EDF447A" /* ShaderLoader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ShaderLoader.h; path = src/ShaderLoader.h; sourceTree = SOURCE_ROOT; };
+		"8A2CD3E4-9FE0-4FC3-A8FD-C23265567B75" /* ofxMidiMessage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidiMessage.h; path = ../../../addons/ofxMidi/src/ofxMidiMessage.h; sourceTree = SOURCE_ROOT; };
+		"8DD69DA1-821C-4D60-9B17-601DF276F9E0" /* TextureHelper.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = TextureHelper.cpp; path = src/TextureHelper.cpp; sourceTree = SOURCE_ROOT; };
+		"91124B2A-D5E3-4F9D-9A3E-712ABEF4A299" /* PGMidi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = PGMidi.h; path = ../../../addons/ofxMidi/libs/pgmidi/PGMidi.h; sourceTree = SOURCE_ROOT; };
+		"930A8564-BC9B-413D-AA92-2D5AA74BD8F8" /* tinyxml.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tinyxml.h; path = ../../../addons/ofxXmlSettings/libs/tinyxml.h; sourceTree = SOURCE_ROOT; };
+		"95EC3900-6747-40DD-AB47-10A96C3FEEE4" /* ofxMidiTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidiTypes.h; path = ../../../addons/ofxMidi/src/ofxMidiTypes.h; sourceTree = SOURCE_ROOT; };
+		"9D6CA399-E1DF-4F16-8187-46F9152D069D" /* fftw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fftw3.h; path = ../../../addons/ofxFft/libs/fftw/include/fftw3.h; sourceTree = SOURCE_ROOT; };
+		"9ED4BBDD-2AC6-45E9-9209-23576FD0933A" /* ofxMidiMessage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxMidiMessage.cpp; path = ../../../addons/ofxMidi/src/ofxMidiMessage.cpp; sourceTree = SOURCE_ROOT; };
+		"9FCA8BC2-7451-49D1-AECE-C71925E62E69" /* ofxFft.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxFft.cpp; path = ../../../addons/ofxFft/src/ofxFft.cpp; sourceTree = SOURCE_ROOT; };
+		"A0799FC1-98A4-4246-B675-4739D63C92AD" /* ofxPGMidiOut.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ofxPGMidiOut.mm; path = ../../../addons/ofxMidi/src/ios/ofxPGMidiOut.mm; sourceTree = SOURCE_ROOT; };
+		"A1192FEC-8F78-41C1-A722-115F0D43A993" /* MeshGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MeshGenerator.h; path = src/MeshGenerator.h; sourceTree = SOURCE_ROOT; };
+		"A64BCFB1-DD6E-4CDF-989A-6A6F0986B73C" /* ofxMidi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidi.h; path = ../../../addons/ofxMidi/src/ofxMidi.h; sourceTree = SOURCE_ROOT; };
+		"A71FFB20-63E9-4094-B55D-1869B9054852" /* kiss_fftr.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = kiss_fftr.c; path = ../../../addons/ofxFft/libs/kiss/kiss_fftr.c; sourceTree = SOURCE_ROOT; };
+		"A83FA79B-7CBD-4C65-A4ED-0BF962A19D97" /* kiss_fft.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = kiss_fft.h; path = ../../../addons/ofxFft/libs/kiss/kiss_fft.h; sourceTree = SOURCE_ROOT; };
+		"A96A2949-AD33-4350-9FEE-A1A8A6DD39D5" /* ofxRtMidiOut.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxRtMidiOut.cpp; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiOut.cpp; sourceTree = SOURCE_ROOT; };
+		"AF730DF4-8080-4DD5-82E0-5BD03050ED7F" /* ofxPGMidiIn.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ofxPGMidiIn.mm; path = ../../../addons/ofxMidi/src/ios/ofxPGMidiIn.mm; sourceTree = SOURCE_ROOT; };
+		"B15B9E96-306B-4562-90D9-AD0D7AE5DD2E" /* ofxEasyFft.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxEasyFft.cpp; path = ../../../addons/ofxFft/src/ofxEasyFft.cpp; sourceTree = SOURCE_ROOT; };
+		"B1F8E407-A06B-4DDA-BF8F-483244664A33" /* ofxMidiClock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidiClock.h; path = ../../../addons/ofxMidi/src/ofxMidiClock.h; sourceTree = SOURCE_ROOT; };
+		"B678AF1A-E918-4902-A649-1F60FFD36497" /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxXmlSettings.cpp; path = ../../../addons/ofxXmlSettings/src/ofxXmlSettings.cpp; sourceTree = SOURCE_ROOT; };
+		"BA60DCD7-B128-4064-969E-EFEF37A3EFE5" /* tinyxmlparser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxmlparser.cpp; path = ../../../addons/ofxXmlSettings/libs/tinyxmlparser.cpp; sourceTree = SOURCE_ROOT; };
+		"BB50B92E-8949-4895-B0E6-2959E96BA28B" /* _kiss_fft_guts.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = _kiss_fft_guts.h; path = ../../../addons/ofxFft/libs/kiss/_kiss_fft_guts.h; sourceTree = SOURCE_ROOT; };
+		"BBBBF034-F966-4E38-975B-F636A7B04D51" /* ofxMidiTimecode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidiTimecode.h; path = ../../../addons/ofxMidi/src/ofxMidiTimecode.h; sourceTree = SOURCE_ROOT; };
+		"C1E303B9-1D06-43EF-9576-D165FBF824C3" /* RtMidi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = RtMidi.h; path = ../../../addons/ofxMidi/libs/rtmidi/RtMidi.h; sourceTree = SOURCE_ROOT; };
+		"C1F56F07-6ACE-4CA1-B7A1-A8DDD56AAE71" /* PGMidiAllSources.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = PGMidiAllSources.mm; path = ../../../addons/ofxMidi/libs/pgmidi/PGMidiAllSources.mm; sourceTree = SOURCE_ROOT; };
+		"C6677659-9D5A-4717-9B1A-2A02D627EB44" /* ofxMidiOut.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxMidiOut.h; path = ../../../addons/ofxMidi/src/ofxMidiOut.h; sourceTree = SOURCE_ROOT; };
+		"C97FD0C0-9A19-4AE4-A7DE-B51B0105844D" /* ofxRtMidiIn.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxRtMidiIn.h; path = ../../../addons/ofxMidi/src/desktop/ofxRtMidiIn.h; sourceTree = SOURCE_ROOT; };
+		"CE745C6B-AF35-448A-9E1F-24975AB2296E" /* RtMidi.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = RtMidi.cpp; path = ../../../addons/ofxMidi/libs/rtmidi/RtMidi.cpp; sourceTree = SOURCE_ROOT; };
+		"CF0115C9-8ACE-4780-A2AC-64248910B3FB" /* kiss_fftr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = kiss_fftr.h; path = ../../../addons/ofxFft/libs/kiss/kiss_fftr.h; sourceTree = SOURCE_ROOT; };
+		"DACA5092-B0BB-4FDC-AD8D-2E736ED4618E" /* MidiManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = MidiManager.cpp; path = src/MidiManager.cpp; sourceTree = SOURCE_ROOT; };
+		"DBB8BCEA-6843-492C-B045-B6F1BC27F168" /* ofxPGMidiDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ofxPGMidiDelegate.mm; path = ../../../addons/ofxMidi/src/ios/ofxPGMidiDelegate.mm; sourceTree = SOURCE_ROOT; };
+		"DDF94342-C28C-4FA4-8D03-499D8268A097" /* ofxPGMidiSourceDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ofxPGMidiSourceDelegate.mm; path = ../../../addons/ofxMidi/src/ios/ofxPGMidiSourceDelegate.mm; sourceTree = SOURCE_ROOT; };
+		DE861CBE2D82ECCE00956097 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		DECFE5192D8537CF00AFCE06 /* V4L2Helper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = V4L2Helper.cpp; sourceTree = "<group>"; };
+		DECFE51A2D8537CF00AFCE06 /* V4L2Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = V4L2Helper.h; sourceTree = "<group>"; };
+		"E1812141-559A-43A3-BBB1-84FF71F29F15" /* ofxProcessFFT.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxProcessFFT.cpp; path = ../../../addons/ofxFft/src/ofxProcessFFT.cpp; sourceTree = SOURCE_ROOT; };
+		"E3E83DBB-B414-4F54-84BF-09350D60C51F" /* MidiManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = MidiManager.h; path = src/MidiManager.h; sourceTree = SOURCE_ROOT; };
+		E4B69B5B0A3A1756003C02F2 /* SputnikMeshFFTDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SputnikMeshFFTDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		"E55CB356-49AD-46C2-84F8-BF115C5CDCC9" /* ofxFftBasic.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxFftBasic.cpp; path = ../../../addons/ofxFft/src/ofxFftBasic.cpp; sourceTree = SOURCE_ROOT; };
+		"EE678172-8E69-4076-80C0-0206BAA32881" /* kiss_fft.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = kiss_fft.c; path = ../../../addons/ofxFft/libs/kiss/kiss_fft.c; sourceTree = SOURCE_ROOT; };
+		"F049A420-1DBC-4961-8590-EA96528BD8A8" /* ofxMidiClock.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxMidiClock.cpp; path = ../../../addons/ofxMidi/src/ofxMidiClock.cpp; sourceTree = SOURCE_ROOT; };
+		"F818D1BE-E976-4278-94A3-D7E5A1B84AE8" /* ofxProcessFFT.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxProcessFFT.h; path = ../../../addons/ofxFft/src/ofxProcessFFT.h; sourceTree = SOURCE_ROOT; };
+		"F9A098E5-864F-4DD6-B91C-E8CDA114C72A" /* ofxMidiOut.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxMidiOut.cpp; path = ../../../addons/ofxMidi/src/ofxMidiOut.cpp; sourceTree = SOURCE_ROOT; };
+		"FED187E2-2E2A-4FDC-B961-6251AD907F36" /* ofxEasyFft.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxEasyFft.h; path = ../../../addons/ofxFft/src/ofxEasyFft.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE861CBF2D82ECCE00956097 /* CoreMIDI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		"1AD9C1B1-7F19-4C31-9A06-A30C5DD2B837" /* ofxFft */ = {
+			isa = PBXGroup;
+			children = (
+				"84C74927-587E-44C4-8A9A-35B1D5817A2D" /* libs */,
+				"2BFE8601-006E-437C-8B54-45517165CE46" /* src */,
+			);
+			name = ofxFft;
+			path = ../../../addons/ofxFft;
+			sourceTree = SOURCE_ROOT;
+		};
+		"2BFE8601-006E-437C-8B54-45517165CE46" /* src */ = {
+			isa = PBXGroup;
+			children = (
+				"B15B9E96-306B-4562-90D9-AD0D7AE5DD2E" /* ofxEasyFft.cpp */,
+				"FED187E2-2E2A-4FDC-B961-6251AD907F36" /* ofxEasyFft.h */,
+				"9FCA8BC2-7451-49D1-AECE-C71925E62E69" /* ofxFft.cpp */,
+				"331DB41B-E2A7-4028-B6BA-807507B1DA76" /* ofxFft.h */,
+				"E55CB356-49AD-46C2-84F8-BF115C5CDCC9" /* ofxFftBasic.cpp */,
+				"3B477D91-65D6-4562-8706-CDEC0A6DC474" /* ofxFftBasic.h */,
+				"37F0690A-CFB3-4487-909F-0FF2D000D077" /* ofxFftw.cpp */,
+				"3106DBBA-0CC4-4F61-957E-3732BD07A754" /* ofxFftw.h */,
+				"5B37FFC8-5400-4469-9142-22B9593319C1" /* ofxFftwKiss.h */,
+				"E1812141-559A-43A3-BBB1-84FF71F29F15" /* ofxProcessFFT.cpp */,
+				"F818D1BE-E976-4278-94A3-D7E5A1B84AE8" /* ofxProcessFFT.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxFft/src;
+			sourceTree = SOURCE_ROOT;
+		};
+		"2E82F061-C09C-4034-894C-E034441B163A" /* include */ = {
+			isa = PBXGroup;
+			children = (
+				"9D6CA399-E1DF-4F16-8187-46F9152D069D" /* fftw3.h */,
+			);
+			name = include;
+			path = ../../../addons/ofxFft/libs/fftw/include;
+			sourceTree = SOURCE_ROOT;
+		};
+		"3D106E74-2C7A-41E9-82CA-E82EEF17110A" /* ofxXmlSettings */ = {
+			isa = PBXGroup;
+			children = (
+				"479894D1-65CA-423C-96D9-E6CAEDD761E9" /* libs */,
+				"5DE3627B-7732-4145-8CB7-7665615C21E1" /* src */,
+			);
+			name = ofxXmlSettings;
+			path = ../../../addons/ofxXmlSettings;
+			sourceTree = SOURCE_ROOT;
+		};
+		"479894D1-65CA-423C-96D9-E6CAEDD761E9" /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				"5282F015-CEBE-469F-AA95-112B84D3947E" /* tinyxml.cpp */,
+				"930A8564-BC9B-413D-AA92-2D5AA74BD8F8" /* tinyxml.h */,
+				"50969C29-4819-4B88-8BC0-C4C5614749FB" /* tinyxmlerror.cpp */,
+				"BA60DCD7-B128-4064-969E-EFEF37A3EFE5" /* tinyxmlparser.cpp */,
+			);
+			name = libs;
+			path = ../../../addons/ofxXmlSettings/libs;
+			sourceTree = SOURCE_ROOT;
+		};
+		"5BC1D750-0EFA-4D4C-87C0-D87E76083192" /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				"8388F14D-F512-4CE5-AACA-18F409DD2A5E" /* pgmidi */,
+				"769586A9-0CAF-4627-B462-AB12C6DFB14B" /* rtmidi */,
+			);
+			name = libs;
+			path = ../../../addons/ofxMidi/libs;
+			sourceTree = SOURCE_ROOT;
+		};
+		"5DE3627B-7732-4145-8CB7-7665615C21E1" /* src */ = {
+			isa = PBXGroup;
+			children = (
+				"B678AF1A-E918-4902-A649-1F60FFD36497" /* ofxXmlSettings.cpp */,
+				"75AC637E-18E9-4520-9262-BDBF23409D4F" /* ofxXmlSettings.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxXmlSettings/src;
+			sourceTree = SOURCE_ROOT;
+		};
+		"769586A9-0CAF-4627-B462-AB12C6DFB14B" /* rtmidi */ = {
+			isa = PBXGroup;
+			children = (
+				"CE745C6B-AF35-448A-9E1F-24975AB2296E" /* RtMidi.cpp */,
+				"C1E303B9-1D06-43EF-9576-D165FBF824C3" /* RtMidi.h */,
+			);
+			name = rtmidi;
+			path = ../../../addons/ofxMidi/libs/rtmidi;
+			sourceTree = SOURCE_ROOT;
+		};
+		"8388F14D-F512-4CE5-AACA-18F409DD2A5E" /* pgmidi */ = {
+			isa = PBXGroup;
+			children = (
+				"438CBEEE-328C-4877-B7FF-F4947C392D30" /* PGArc.h */,
+				"91124B2A-D5E3-4F9D-9A3E-712ABEF4A299" /* PGMidi.h */,
+				"340956B7-C005-48EB-AE25-6723FA1B0CC6" /* PGMidi.mm */,
+				"22781C72-62BD-40B8-AFA6-4C6FE45EE980" /* PGMidiAllSources.h */,
+				"C1F56F07-6ACE-4CA1-B7A1-A8DDD56AAE71" /* PGMidiAllSources.mm */,
+				"56DB6A13-9301-4C91-91B9-B83B91455C48" /* PGMidiFind.h */,
+				"165739B7-3BB8-4153-90AA-EFBFF77E4288" /* PGMidiFind.mm */,
+				"55538DA2-EA39-4BAB-BE7B-3A05C0E44B0F" /* iOSVersionDetection.h */,
+			);
+			name = pgmidi;
+			path = ../../../addons/ofxMidi/libs/pgmidi;
+			sourceTree = SOURCE_ROOT;
+		};
+		"84C74927-587E-44C4-8A9A-35B1D5817A2D" /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				"BF57AAC7-F627-4E83-916A-078B4160C88C" /* fftw */,
+				"F1147B4A-52E2-4A1D-AE27-22A21A964B10" /* kiss */,
+			);
+			name = libs;
+			path = ../../../addons/ofxFft/libs;
+			sourceTree = SOURCE_ROOT;
+		};
+		"A7FAA77A-213C-45AD-86B3-41DA9BC37D35" /* ofxMidi */ = {
+			isa = PBXGroup;
+			children = (
+				"5BC1D750-0EFA-4D4C-87C0-D87E76083192" /* libs */,
+				"B2294BE8-1FDD-4C96-A768-9E73CB4DC1FF" /* src */,
+			);
+			name = ofxMidi;
+			path = ../../../addons/ofxMidi;
+			sourceTree = SOURCE_ROOT;
+		};
+		"B2294BE8-1FDD-4C96-A768-9E73CB4DC1FF" /* src */ = {
+			isa = PBXGroup;
+			children = (
+				"CD32E061-AAD6-4608-A8BD-C77BD26D7C9F" /* desktop */,
+				"D89FA294-2E36-423B-8D09-1B52A3A49D6A" /* ios */,
+				"72410BD4-A835-435D-9F89-5D67BA9E8B8A" /* ofxBaseMidi.cpp */,
+				"04C6B178-8DC7-4915-99D2-10F6A259671A" /* ofxBaseMidi.h */,
+				"540B168A-471B-4A24-AA9B-9CD08DC0EE07" /* ofxMidi.cpp */,
+				"A64BCFB1-DD6E-4CDF-989A-6A6F0986B73C" /* ofxMidi.h */,
+				"F049A420-1DBC-4961-8590-EA96528BD8A8" /* ofxMidiClock.cpp */,
+				"B1F8E407-A06B-4DDA-BF8F-483244664A33" /* ofxMidiClock.h */,
+				"5B641352-77E7-44BB-90DC-5DC183974804" /* ofxMidiConstants.h */,
+				"374D4219-81CD-4F77-A9B9-F32F38BC8CB5" /* ofxMidiIn.cpp */,
+				"173C1761-BCE3-4763-A50F-0FE6C666446C" /* ofxMidiIn.h */,
+				"9ED4BBDD-2AC6-45E9-9209-23576FD0933A" /* ofxMidiMessage.cpp */,
+				"8A2CD3E4-9FE0-4FC3-A8FD-C23265567B75" /* ofxMidiMessage.h */,
+				"F9A098E5-864F-4DD6-B91C-E8CDA114C72A" /* ofxMidiOut.cpp */,
+				"C6677659-9D5A-4717-9B1A-2A02D627EB44" /* ofxMidiOut.h */,
+				"4559D345-D37B-4DEB-9325-191137A5F51E" /* ofxMidiTimecode.cpp */,
+				"BBBBF034-F966-4E38-975B-F636A7B04D51" /* ofxMidiTimecode.h */,
+				"95EC3900-6747-40DD-AB47-10A96C3FEEE4" /* ofxMidiTypes.h */,
+			);
+			name = src;
+			path = ../../../addons/ofxMidi/src;
+			sourceTree = SOURCE_ROOT;
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				"1AD9C1B1-7F19-4C31-9A06-A30C5DD2B837" /* ofxFft */,
+				"A7FAA77A-213C-45AD-86B3-41DA9BC37D35" /* ofxMidi */,
+				"3D106E74-2C7A-41E9-82CA-E82EEF17110A" /* ofxXmlSettings */,
+			);
+			name = addons;
+			path = ../../../addons;
+			sourceTree = "<group>";
+		};
+		"BF57AAC7-F627-4E83-916A-078B4160C88C" /* fftw */ = {
+			isa = PBXGroup;
+			children = (
+				"2E82F061-C09C-4034-894C-E034441B163A" /* include */,
+			);
+			name = fftw;
+			path = ../../../addons/ofxFft/libs/fftw;
+			sourceTree = SOURCE_ROOT;
+		};
+		"CD32E061-AAD6-4608-A8BD-C77BD26D7C9F" /* desktop */ = {
+			isa = PBXGroup;
+			children = (
+				"3C767DD4-75C4-4154-9FB5-5AA1FFC128EE" /* ofxRtMidiIn.cpp */,
+				"C97FD0C0-9A19-4AE4-A7DE-B51B0105844D" /* ofxRtMidiIn.h */,
+				"A96A2949-AD33-4350-9FEE-A1A8A6DD39D5" /* ofxRtMidiOut.cpp */,
+				"24DD3363-CA88-486C-B42E-4311BB677D6B" /* ofxRtMidiOut.h */,
+			);
+			name = desktop;
+			path = ../../../addons/ofxMidi/src/desktop;
+			sourceTree = SOURCE_ROOT;
+		};
+		"D89FA294-2E36-423B-8D09-1B52A3A49D6A" /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				"0A1355EE-A39A-439C-8379-8402D75E0FF0" /* ofxPGMidiContext.h */,
+				"2F675672-B726-4C7C-836C-95080E2CD7C8" /* ofxPGMidiContext.mm */,
+				"6D676428-F69F-4765-9B0A-E2FDE2906058" /* ofxPGMidiDelegate.h */,
+				"DBB8BCEA-6843-492C-B045-B6F1BC27F168" /* ofxPGMidiDelegate.mm */,
+				"222456DF-5673-439A-9261-F92F2293B764" /* ofxPGMidiIn.h */,
+				"AF730DF4-8080-4DD5-82E0-5BD03050ED7F" /* ofxPGMidiIn.mm */,
+				"2DF6EC35-C8B6-4462-ACEF-7EF5DD1BC91A" /* ofxPGMidiOut.h */,
+				"A0799FC1-98A4-4246-B675-4739D63C92AD" /* ofxPGMidiOut.mm */,
+				"369B725A-F4E0-46FE-8AC8-6E16530B9E44" /* ofxPGMidiSourceDelegate.h */,
+				"DDF94342-C28C-4FA4-8D03-499D8268A097" /* ofxPGMidiSourceDelegate.mm */,
+			);
+			name = ios;
+			path = ../../../addons/ofxMidi/src/ios;
+			sourceTree = SOURCE_ROOT;
+		};
+		DE861CBD2D82ECCD00956097 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE861CBE2D82ECCE00956097 /* CoreMIDI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				191CD6FA2847E21E0085CBB6 /* of.entitlements */,
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				191EF70929D778A400F35F26 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				E4B69B5B0A3A1756003C02F2 /* SputnikMeshFFTDebug.app */,
+				DE861CBD2D82ECCD00956097 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				"12FB3541-B86C-44F3-86CA-91E1CAD0DE40" /* AudioReactivityManager.cpp */,
+				"4DCF4B42-EE6F-4FE3-B686-E0991095A7D0" /* AudioReactivityManager.h */,
+				"041E2AF9-F80C-4D64-B315-3DC5F49A2A81" /* MeshGenerator.cpp */,
+				"A1192FEC-8F78-41C1-A722-115F0D43A993" /* MeshGenerator.h */,
+				"DACA5092-B0BB-4FDC-AD8D-2E736ED4618E" /* MidiManager.cpp */,
+				"E3E83DBB-B414-4F54-84BF-09350D60C51F" /* MidiManager.h */,
+				"56461F00-77F3-43E3-9EBA-52EDB3D93A40" /* ParameterManager.cpp */,
+				"47572930-CB4D-4D8B-834F-97E345DF1747" /* ParameterManager.h */,
+				"18E81D0D-ED02-4921-8386-AC275AD30F14" /* ShaderLoader.cpp */,
+				"8709A3D7-7ABC-4318-9740-4A046EDF447A" /* ShaderLoader.h */,
+				"8DD69DA1-821C-4D60-9B17-601DF276F9E0" /* TextureHelper.cpp */,
+				"67635D58-78D4-4A43-98BC-239E75BDAC9B" /* TextureHelper.h */,
+				DECFE5192D8537CF00AFCE06 /* V4L2Helper.cpp */,
+				DECFE51A2D8537CF00AFCE06 /* V4L2Helper.h */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		"F1147B4A-52E2-4A1D-AE27-22A21A964B10" /* kiss */ = {
+			isa = PBXGroup;
+			children = (
+				"BB50B92E-8949-4895-B0E6-2959E96BA28B" /* _kiss_fft_guts.h */,
+				"EE678172-8E69-4076-80C0-0206BAA32881" /* kiss_fft.c */,
+				"A83FA79B-7CBD-4C65-A4ED-0BF962A19D97" /* kiss_fft.h */,
+				"A71FFB20-63E9-4094-B55D-1869B9054852" /* kiss_fftr.c */,
+				"CF0115C9-8ACE-4780-A2AC-64248910B3FB" /* kiss_fftr.h */,
+			);
+			name = kiss;
+			path = ../../../addons/ofxFft/libs/kiss;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* SputnikMeshFFT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "SputnikMeshFFT" */;
+			buildPhases = (
+				E42962A92163ECCD00A6A9E2 /* Run Script — Compile OF */,
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+				E4A5B60F29BAAAE400C2D356 /* CopyFiles */,
+				19B789C429E5AB4A0082E9B8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SputnikMeshFFT;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* SputnikMeshFFTDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "SputnikMeshFFT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* SputnikMeshFFT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19B789C429E5AB4A0082E9B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$OF_PATH/scripts/osx/xcode_project.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E42962A92163ECCD00A6A9E2 /* Run Script — Compile OF */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script — Compile OF";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"💾 Compiling Openframeworks\"\nxcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"  CLANG_CXX_LANGUAGE_STANDARD=$CLANG_CXX_LANGUAGE_STANDARD MACOSX_DEPLOYMENT_TARGET=$MACOSX_DEPLOYMENT_TARGET GCC_PREPROCESSOR_DEFINITIONS=$USER_PREPROCESSOR_DEFINITIONS\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				"75D0C19F-CC16-4028-9CAA-9E8C495B0AD8" /* AudioReactivityManager.cpp in Sources */,
+				"A077E46E-2B0E-4F85-A448-33D3EE0D3412" /* MeshGenerator.cpp in Sources */,
+				"B2741722-2E13-485D-874A-B6CC35A617AF" /* MidiManager.cpp in Sources */,
+				"CA0E3D38-5C6F-437F-9B69-C385B70A8425" /* ParameterManager.cpp in Sources */,
+				"E895C423-9C85-4F5B-9B60-85680E7D4F7F" /* ShaderLoader.cpp in Sources */,
+				"36B860AB-1530-4E2B-A0A0-F9C6C462A0AF" /* TextureHelper.cpp in Sources */,
+				"2B146A13-A7D4-4ECB-8A59-F6EBB63118B0" /* kiss_fft.c in Sources */,
+				"5D827B76-AD09-49B7-8718-14DDDC9CBCCC" /* kiss_fftr.c in Sources */,
+				"495F8BC6-3A0A-45B7-B84D-33A0B6CA797B" /* ofxEasyFft.cpp in Sources */,
+				"6F0254BB-6A7E-4096-B531-C93AF317B2EB" /* ofxFft.cpp in Sources */,
+				"74991C28-C686-4BFC-879C-92E173E1F8F9" /* ofxFftBasic.cpp in Sources */,
+				"2C73C232-FF69-4D36-AB3F-7FEA2F0BE24E" /* ofxFftw.cpp in Sources */,
+				"4EE5E699-2262-41C4-80F4-11498F920F1D" /* ofxProcessFFT.cpp in Sources */,
+				"35D690A2-34CD-4532-A6C0-88B1CC8B194C" /* PGMidi.mm in Sources */,
+				"3F8D91DC-D110-4258-97CB-A06DC06DE8F8" /* PGMidiAllSources.mm in Sources */,
+				"5D27175A-3667-4CAB-8048-645C2167C1EB" /* PGMidiFind.mm in Sources */,
+				"F9EC0D94-0346-43F9-A2F3-97603FCCD77C" /* RtMidi.cpp in Sources */,
+				"BEF1A7D2-804A-4995-8A9C-4CABB23C10C5" /* ofxRtMidiIn.cpp in Sources */,
+				"C88522EB-D747-43F0-B864-452C2FD6692C" /* ofxRtMidiOut.cpp in Sources */,
+				"B1D6C37D-F163-46C5-9F53-C2A9A77D5AF0" /* ofxPGMidiContext.mm in Sources */,
+				"25193A5E-CE14-4BCD-837F-820308C13509" /* ofxPGMidiDelegate.mm in Sources */,
+				"8B5FF3CE-5181-42F3-8B53-20B77198E012" /* ofxPGMidiIn.mm in Sources */,
+				"C9C02B50-7CAC-45BD-939D-00105F5CF8B2" /* ofxPGMidiOut.mm in Sources */,
+				"C411EFBD-2C3F-435D-84C2-336ADA70C0E1" /* ofxPGMidiSourceDelegate.mm in Sources */,
+				"4F38792A-A389-40A9-A482-73E3C795A190" /* ofxBaseMidi.cpp in Sources */,
+				"CA710A3E-883B-4128-92FD-BDA2A387AADB" /* ofxMidi.cpp in Sources */,
+				"574890B6-9A79-4CA8-A3EA-61E505601419" /* ofxMidiClock.cpp in Sources */,
+				"D232F57D-8D98-4A98-9D3A-C252928CC318" /* ofxMidiIn.cpp in Sources */,
+				"64D19569-6000-4BA8-A83A-EDBABBBD8DF1" /* ofxMidiMessage.cpp in Sources */,
+				"5EFE7B92-697F-4E3A-9E71-0B92DDF846B0" /* ofxMidiOut.cpp in Sources */,
+				"5687A4B3-CB61-4942-BE14-94FE559A3481" /* ofxMidiTimecode.cpp in Sources */,
+				"0BC0E143-29BB-4C7E-9D6A-1B3600643910" /* tinyxml.cpp in Sources */,
+				"6CBBB5A9-968D-45D9-8FFD-208E57DF9D0C" /* tinyxmlerror.cpp in Sources */,
+				DECFE51B2D8537CF00AFCE06 /* V4L2Helper.cpp in Sources */,
+				"EE25C7F2-2F55-4072-8E57-63D8A9546BB2" /* tinyxmlparser.cpp in Sources */,
+				"BDCCFAC4-7F70-40C6-B91C-3D9135CA8424" /* ofxXmlSettings.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = of.entitlements;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				OTHER_CPLUSPLUSFLAGS = "-D__MACOSX_CORE__";
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = of.entitlements;
+				COPY_PHASE_STRIP = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_UNROLL_LOOPS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				OTHER_CPLUSPLUSFLAGS = "-D__MACOSX_CORE__";
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					src,
+					../../../addons/ofxFft/libs,
+					../../../addons/ofxFft/libs/fftw,
+					../../../addons/ofxFft/libs/fftw/include,
+					../../../addons/ofxFft/libs/fftw/lib,
+					../../../addons/ofxFft/libs/kiss,
+					../../../addons/ofxFft/src,
+					../../../addons/ofxMidi/libs,
+					../../../addons/ofxMidi/libs/pgmidi,
+					../../../addons/ofxMidi/libs/rtmidi,
+					../../../addons/ofxMidi/src,
+					../../../addons/ofxMidi/src/desktop,
+					../../../addons/ofxMidi/src/ios,
+					../../../addons/ofxXmlSettings/libs,
+					../../../addons/ofxXmlSettings/src,
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF_DEBUG)",
+				);
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					src,
+					../../../addons/ofxFft/libs,
+					../../../addons/ofxFft/libs/fftw,
+					../../../addons/ofxFft/libs/fftw/include,
+					../../../addons/ofxFft/libs/fftw/lib,
+					../../../addons/ofxFft/libs/kiss,
+					../../../addons/ofxFft/src,
+					../../../addons/ofxMidi/libs,
+					../../../addons/ofxMidi/libs/pgmidi,
+					../../../addons/ofxMidi/libs/rtmidi,
+					../../../addons/ofxMidi/src,
+					../../../addons/ofxMidi/src/desktop,
+					../../../addons/ofxMidi/src/ios,
+					../../../addons/ofxXmlSettings/libs,
+					../../../addons/ofxXmlSettings/src,
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+				);
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "SputnikMeshFFT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "SputnikMeshFFT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}
