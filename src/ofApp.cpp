@@ -351,6 +351,14 @@ void ofApp::exit() {
 
 //--------------------------------------------------------------
 void ofApp::setupCamera(int w, int h) {
+    // Force V4L2 over GStreamer on Linux
+    #ifdef TARGET_LINUX
+    // Tell openFrameworks to use v4l2 directly
+    setenv("OF_VIDEO_CAPTURE_BACKEND", "v4l2", 1);
+    // Disable GStreamer logging
+    setenv("GST_DEBUG", "0", 1);
+    #endif
+    
     // List available devices if we haven't already
     if (videoDevices.empty()) {
         listVideoDevices();
@@ -362,93 +370,162 @@ void ofApp::setupCamera(int w, int h) {
     std::string format = paramManager->getVideoFormat();
     bool performanceMode = paramManager->isPerformanceModeEnabled();
     
-    // Get desired dimensions, possibly adjusted for performance
+    // For EM2860/SAA711X device, force format to YUYV which we know works
+    #ifdef TARGET_LINUX
+    format = "YUYV";
+    ofLogNotice("ofApp") << "Force to YUYV format for EM2860/SAA711X device";
+    #endif
+    
+    // Get dimensions but constrain to what the device supports
     int desiredWidth = paramManager->getVideoWidth();
     int desiredHeight = paramManager->getVideoHeight();
     
-    // In performance mode, limit resolution if it's too high
-    if (performanceMode && desiredWidth > 640) {
-        float aspect = (float)desiredHeight / desiredWidth;
-        desiredWidth = 640;
-        desiredHeight = round(desiredWidth * aspect);
-        ofLogNotice("ofApp") << "Performance Mode: Camera resolution limited to "
-                           << desiredWidth << "x" << desiredHeight;
+    #ifdef TARGET_LINUX
+    // Constrain to valid range for EM2860/SAA711X device
+    if (desiredWidth > 720) desiredWidth = 720;
+    if (desiredHeight > 576) desiredHeight = 576;
+    if (desiredWidth < 144) desiredWidth = 144;
+    if (desiredHeight < 115) desiredHeight = 115;
+    
+    // For this device, common working resolution
+    if (desiredWidth == 640 && desiredHeight != 480) {
+        desiredHeight = 480;
     }
+    #endif
     
     int frameRate = performanceMode ? 24 : paramManager->getVideoFrameRate();
     
-    // Set device ID if we have a valid one
+    // On Raspberry Pi, we need to set format BEFORE initializing grabber
+    #ifdef TARGET_LINUX
+    // First close any existing camera
+    if (camera.isInitialized()) {
+        camera.close();
+    }
+    
+    // Use v4l2-ctl directly to set the format (more reliable)
+    std::string v4l2Cmd = "v4l2-ctl -d " + devicePath +
+                           " --set-fmt-video=width=" + ofToString(desiredWidth) +
+                           ",height=" + ofToString(desiredHeight) +
+                           ",pixelformat=YUYV";
+                           
+    ofLogNotice("ofApp") << "Running: " << v4l2Cmd;
+    system(v4l2Cmd.c_str());
+    
+    // Also set the framerate
+    v4l2Cmd = "v4l2-ctl -d " + devicePath + " --set-parm=" + ofToString(frameRate);
+    ofLogNotice("ofApp") << "Running: " << v4l2Cmd;
+    system(v4l2Cmd.c_str());
+    #endif
+    
+    // Now initialize openFrameworks grabber
+    // We're avoiding camera.setDevicePath because it might not be implemented
+    
+    #ifdef TARGET_LINUX
+    // Linux uses device ID
     if (deviceID >= 0 && deviceID < videoDevices.size()) {
         camera.setDeviceID(deviceID);
         ofLogNotice("ofApp") << "Setting camera device ID to: " << deviceID;
     } else {
-        camera.setDeviceID(0); // Use first available device
+        camera.setDeviceID(0);
         ofLogNotice("ofApp") << "Using default camera device ID: 0";
     }
-    
-    // Set desired frame rate
-    camera.setDesiredFrameRate(frameRate);
-    ofLogNotice("ofApp") << "Setting camera frame rate to: " << frameRate;
-    
-    // On Linux/Raspberry Pi, try to set the format using V4L2 before opening
-    #ifdef TARGET_LINUX
-    if (!format.empty() && !devicePath.empty()) {
-        uint32_t formatCode = V4L2Helper::formatNameToCode(format);
-        // Try setting the format
-        ofLogNotice("ofApp") << "Trying to set V4L2 format: " << format << " ("
-                           << formatCode << ") " << desiredWidth << "x" << desiredHeight;
-        V4L2Helper::setFormat(devicePath, formatCode, desiredWidth, desiredHeight);
+    #else
+    // macOS also uses device ID
+    if (deviceID >= 0 && deviceID < videoDevices.size()) {
+        camera.setDeviceID(deviceID);
+        ofLogNotice("ofApp") << "Setting camera device ID to: " << deviceID;
+    } else {
+        camera.setDeviceID(0);
+        ofLogNotice("ofApp") << "Using default camera device ID: 0";
     }
     #endif
     
-    // Use desired dimensions if specified, otherwise use passed values
+    // Set framerate
+    camera.setDesiredFrameRate(frameRate);
+    ofLogNotice("ofApp") << "Setting camera frame rate to: " << frameRate;
+    
+    // Use dimensions
     int useWidth = (desiredWidth > 0) ? desiredWidth : w;
     int useHeight = (desiredHeight > 0) ? desiredHeight : h;
     
     ofLogNotice("ofApp") << "Initializing camera with size: " << useWidth << "x" << useHeight;
     
-    // Initialize the grabber
-    camera.initGrabber(useWidth, useHeight);
+    // Try to initialize camera
+    bool initSuccess = false;
     
-    // Update parameter manager with actual dimensions (may differ from requested)
-    paramManager->setVideoWidth(camera.getWidth());
-    paramManager->setVideoHeight(camera.getHeight());
-    
-    ofLogNotice("ofApp") << "Camera initialized: "
-                       << camera.getWidth() << "x" << camera.getHeight()
-                       << " @ " << frameRate << "fps";
-    
-    // Get and log the actual format that was set
-    #ifdef TARGET_LINUX
-    if (!devicePath.empty()) {
-        V4L2Helper::VideoFormat currentFormat = V4L2Helper::getCurrentFormat(devicePath);
-        ofLogNotice("ofApp") << "Current format: " << currentFormat.name
-                           << " (" << currentFormat.fourcc << ")";
+    // First try - with requested dimensions
+    try {
+        camera.initGrabber(useWidth, useHeight);
+        initSuccess = camera.isInitialized();
+    } catch (const std::exception& e) {
+        ofLogError("ofApp") << "Exception initializing camera: " << e.what();
     }
-    #endif
     
-    // Check if camera was initialized successfully
-    if (!camera.isInitialized()) {
-        ofLogError("ofApp") << "Failed to initialize camera!";
+    // If that failed, try 640x480 (common working resolution)
+    if (!initSuccess) {
+        ofLogWarning("ofApp") << "First camera init failed, trying 640x480...";
+        try {
+            camera.close();
+            camera.setDeviceID(deviceID >= 0 ? deviceID : 0);
+            camera.initGrabber(640, 480);
+            initSuccess = camera.isInitialized();
+        } catch (const std::exception& e) {
+            ofLogError("ofApp") << "Exception initializing camera with 640x480: " << e.what();
+        }
+    }
+    
+    // If that still failed, create a fallback dummy image
+    if (!initSuccess) {
+        ofLogError("ofApp") << "Camera initialization failed completely. Creating fallback image.";
+        
+        // Create a dummy image to use as fallback
+        ofImage dummyImage;
+        dummyImage.allocate(320, 240, OF_IMAGE_COLOR);
+        dummyImage.setColor(ofColor::purple);
+        dummyImage.update();
+        
+        // Draw it to the camera FBO so rendering still works
+        cameraFbo.begin();
+        ofClear(0, 0, 0, 255);
+        dummyImage.draw(0, 0, width, height);
+        cameraFbo.end();
+    } else {
+        // Camera initialized successfully
+        ofLogNotice("ofApp") << "Camera initialized: "
+                           << camera.getWidth() << "x" << camera.getHeight()
+                           << " @ " << frameRate << "fps";
+        
+        // Update parameter manager with actual dimensions
+        paramManager->setVideoWidth(camera.getWidth());
+        paramManager->setVideoHeight(camera.getHeight());
+        
+        #ifdef TARGET_LINUX
+        // Log the format we got
+        if (!devicePath.empty()) {
+            V4L2Helper::VideoFormat currentFormat = V4L2Helper::getCurrentFormat(devicePath);
+            ofLogNotice("ofApp") << "Current format: " << currentFormat.name
+                               << " (" << currentFormat.fourcc << ")";
+        }
+        #endif
     }
 }
 
 //--------------------------------------------------------------
 void ofApp::updateCamera() {
-    camera.update();
-    
-    if (camera.isFrameNew()) {
-        // Render camera to RGBA FBO
-        cameraFbo.begin();
-        ofClear(0, 0, 0, 255);
-        camera.draw(0, 0, width, height);
-        cameraFbo.end();
-        
-        // Corner crop and stretch to preserve HD aspect ratio if needed
-        if (hdmiAspectRatioEnabled) {
-            aspectFixFbo.begin();
-            cameraFbo.draw(0, 0, 853, 480);
-            aspectFixFbo.end();
+    // Try to update camera if it's initialized
+    if (camera.isInitialized()) {
+        try {
+            camera.update();
+            
+            // Only draw new frame if available
+            if (camera.isFrameNew()) {
+                cameraFbo.begin();
+                ofClear(0, 0, 0, 255);
+                camera.draw(0, 0, width, height);
+                cameraFbo.end();
+            }
+        } catch (const std::exception& e) {
+            ofLogError("ofApp") << "Exception during camera update: " << e.what();
         }
     }
 }
