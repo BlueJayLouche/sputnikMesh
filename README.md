@@ -1,5 +1,7 @@
 # SputnikMesh Configuration Guide
 
+## First and foremost all credit goes to [Andrei Jay](https://andreijaycreativecoding.com/) Show him some love and visit his [Patreon](https://www.patreon.com/andrei_jay)
+
 This document explains how to configure SputnikMesh through the `settings.xml` file. You can adjust MIDI mappings, audio reactivity, FFT bin configuration, video settings, performance mode and more without changing the source code.
 
 ## Understanding settings.xml Structure
